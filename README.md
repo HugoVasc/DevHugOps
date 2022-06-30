@@ -1,2 +1,3 @@
-# project-DevHugOps
-Using this project to inspire myself to learn the DevOps culture. Aiming to become one in the future
+# My Portfolio
+
+Using this project to show my programming skills and tell about the projects I've developed and contributed
