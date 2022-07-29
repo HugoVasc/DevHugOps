@@ -7,15 +7,15 @@ export const Container = styled.div`
 export const Button = styled("button")<{ primary?: boolean }>`
   background: transparent;
   border-radius: 3px;
-  border: 2px solid palevioletred;
-  color: palevioletred;
+  border: 2px solid #102774;
+  color: white;
   margin: 0.5em 1em;
   padding: 0.25em 1em;
 
   ${(prop) =>
     prop.primary &&
     css`
-      background: palevioletred;
+      background: #102774;
       color: white;
     `}
 `;
