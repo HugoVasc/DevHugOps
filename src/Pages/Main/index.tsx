@@ -18,7 +18,7 @@ export function Main() {
         ) : (
           <TestsBody opened={opened} setOpened={setOpened} />
         )}
-        <Collapse isOpened={opened}>
+        <Collapse isOpened={false}>
           <Sidebar />
         </Collapse>
       </StyledMain>
