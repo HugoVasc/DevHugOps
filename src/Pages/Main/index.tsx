@@ -7,16 +7,16 @@ import { useState } from "react";
 import { StyledDiv, StyledMain } from "./styles";
 
 export function Main() {
-  let maintenance = false;
+  let maintenance = true;
   const [opened, setOpened] = useState(true);
   return (
     <StyledDiv>
       <Header />
       <StyledMain>
         {maintenance ? (
-          <TestsBody opened={opened} setOpened={setOpened} />
-        ) : (
           <Maintenance />
+        ) : (
+          <TestsBody opened={opened} setOpened={setOpened} />
         )}
         <Collapse isOpened={opened}>
           <Sidebar />
