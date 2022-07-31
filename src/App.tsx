@@ -2,7 +2,6 @@ import { Main } from "./Pages/Main";
 import { Tests } from "./Pages/Tests";
 import { Contact } from "./Pages/Contact";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { render } from "react-dom";
 
 function App() {
   return (
