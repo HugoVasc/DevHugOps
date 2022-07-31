@@ -1,7 +1,13 @@
 import styled, { css } from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled("div")<{ width?: number; height?: string }>`
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  width: ${(prop) => prop.width}vw;
+  height: ${(prop) => prop.height}vh;
 `;
 
 export const Button = styled("button")<{ primary?: boolean }>`

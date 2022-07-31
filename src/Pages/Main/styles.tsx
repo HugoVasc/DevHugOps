@@ -9,5 +9,4 @@ export const StyledDiv = styled("div")`
 export const StyledMain = styled("main")`
   display: flex;
   flex-direction: row;
-  flex: 1 1 0%;
 `;

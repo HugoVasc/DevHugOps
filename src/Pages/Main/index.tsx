@@ -2,13 +2,13 @@ import { TestsBody } from "../../Components/TestsBody/TestsBody";
 import { Maintenance } from "../../Components/Maintenance/Maintenance";
 import { Header } from "../../Components/Header/Header";
 import { Sidebar } from "../../Components/SideBar/Sidebar";
-import { Collapse } from "react-collapse";
+import { UnmountClosed } from "react-collapse";
 import { useState } from "react";
 import { StyledDiv, StyledMain } from "./styles";
 
 export function Main() {
   let maintenance = false;
-  const [opened, setOpened] = useState(true);
+  const [opened, setOpened] = useState(false);
   return (
     <StyledDiv>
       <Header />
@@ -18,9 +18,9 @@ export function Main() {
         ) : (
           <Maintenance />
         )}
-        <Collapse isOpened={opened}>
+        <UnmountClosed isOpened={opened}>
           <Sidebar />
-        </Collapse>
+        </UnmountClosed>
       </StyledMain>
     </StyledDiv>
   );
