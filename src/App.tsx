@@ -13,9 +13,9 @@ function App() {
 
   return (
     <StyledDiv>
-      <Header opened={opened} setOpened={setOpened} />
-      <StyledMain>
-        <Router>
+      <Router>
+        <Header opened={opened} setOpened={setOpened} />
+        <StyledMain>
           <Routes>
             <Route path="/" element={<Main />}>
               <Route index element={<Main />} />
@@ -23,11 +23,11 @@ function App() {
               <Route path="contact" element={<Contact />} />
             </Route>
           </Routes>
-        </Router>
-        <UnmountClosed isOpened={opened}>
-          <Sidebar />
-        </UnmountClosed>
-      </StyledMain>
+          <UnmountClosed isOpened={opened}>
+            <Sidebar />
+          </UnmountClosed>
+        </StyledMain>
+      </Router>
     </StyledDiv>
   );
 }

@@ -20,15 +20,11 @@ export const Button = styled("button")<{ primary?: boolean }>`
     `}
 `;
 
-export const StyledSpanSchedule = styled("span")`
-  color: rgb(107 114 128 / var(--tw-border-opacity));
-`;
-
 export const StyledSpanTitle = styled("span")`
-  font-size: 0.875rem /* 14px */;
+  font-size: 1rem /* 14px */;
   line-height: 1.25rem /* 20px */;
-  color: rgb(59 130 246 / var(--tw-text-opacity));
-  font-weight: 500;
+  color: #fff;
+  font-weight: 600;
   display: flex;
   align-items: center;
   gap: 0.5rem /* 8px */;
@@ -55,10 +51,11 @@ export const StyledTitle = styled("strong")`
 
 export const StyledDiv = styled("div")`
   border-radius: 0.25rem /* 4px */;
-  border: 1px solid palevioletred;
-  border-color: rgb(107 114 128 / var(--tw-border-opacity));
+  border: 1px solid;
+  border-color: rgb(16 39 116 / var(--tw-border-opacity));
   padding: 1rem; /* 16px */
   margin-top: 0.5rem; /* 8px */
+  background-color: rgb(16 39 116 / var(--tw-text-opacity));
 `;
 
 export const StyledHeader = styled("header")`
