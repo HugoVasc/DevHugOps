@@ -5,13 +5,10 @@ const setChanges = (
   setCount: Function,
   count: number,
   setState: Function,
-  state: boolean,
-  setOpened: Function,
-  opened: boolean
+  state: boolean
 ): void => {
   setCount(count + 1);
   setState(!state);
-  setOpened(!opened);
 };
 
 interface IBody {
@@ -27,16 +24,7 @@ export function TestsBody(props: IBody) {
       <span>{count}</span>
       <Button
         primary={state}
-        onClick={() =>
-          setChanges(
-            setCount,
-            count,
-            setState,
-            state,
-            props.setOpened,
-            props.opened
-          )
-        }
+        onClick={() => setChanges(setCount, count, setState, state)}
       >
         {" "}
         Clique{" "}

@@ -7,6 +7,8 @@ export const StyledDiv = styled("div")`
 `;
 
 export const StyledMain = styled("main")`
+  width: 100vw;
+  padding: 1vh 0.5vw;
   display: flex;
   flex-direction: row;
 `;

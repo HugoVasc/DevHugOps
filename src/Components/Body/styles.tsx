@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const Container = styled.div`
+  margin: 2vh;
   flex: 1;
 `;
 

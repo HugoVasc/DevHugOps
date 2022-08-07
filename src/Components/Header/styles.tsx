@@ -20,3 +20,14 @@ export const StyledTitle = styled.h1`
   font-size: 36px;
   line-height: 45px;
 `;
+
+export const Button = styled("button")<{ primary?: boolean }>`
+  background: transparent;
+  position: absolute;
+  right: 1vh;
+  border-radius: 3px;
+  border: 2px solid #fff;
+  color: white;
+  margin: 0.25em 1em;
+  padding: 0.25em 0.5em;
+`;
