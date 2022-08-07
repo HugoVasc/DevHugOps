@@ -9,9 +9,9 @@ export function Tests() {
   const [opened, setOpened] = useState(true);
   return (
     <StyledDiv>
-      <Header />
+      <Header opened={opened} setOpened={setOpened} />
       <StyledMain>
-        <TestsBody opened={opened} setOpened={setOpened} />
+        <TestsBody />
         <Collapse isOpened={opened}>
           <Sidebar />
         </Collapse>
