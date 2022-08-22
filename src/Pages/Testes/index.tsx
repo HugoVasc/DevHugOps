@@ -5,17 +5,7 @@ import { Collapse } from "react-collapse";
 import { useState } from "react";
 import { StyledDiv, StyledMain } from "./styles";
 
-export function Contact() {
+export function Testes() {
   const [opened, setOpened] = useState(true);
-  return (
-    <StyledDiv>
-      <Header opened={opened} setOpened={setOpened} />
-      <StyledMain>
-        <TestsBody />
-        <Collapse isOpened={opened}>
-          <Sidebar />
-        </Collapse>
-      </StyledMain>
-    </StyledDiv>
-  );
+  return <></>;
 }

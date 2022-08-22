@@ -1,6 +1,6 @@
 import { Main } from "./Pages/Main";
-import { Tests } from "./Pages/Tests";
-import { Contact } from "./Pages/Contact";
+import { Testes } from "./Pages/Testes";
+import { Projects } from "./Pages/Projects";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { StyledDiv, StyledMain } from "./Pages/Main/styles";
 import { Header } from "./Components/Header/Header";
@@ -18,11 +18,9 @@ function App() {
         <Header />
         <StyledMain>
           <Routes>
-            <Route path="/" element={<Main />}>
-              <Route index element={<Main />} />
-              <Route path="tests" element={<Tests />} />
-              <Route path="contact" element={<Contact />} />
-            </Route>
+            <Route index element={<Main />} />
+            <Route path="testes" element={<Testes />} />
+            <Route path="projects" element={<Projects />} />
           </Routes>
           <UnmountClosed isOpened={isSideBarOpened}>
             <Sidebar />
