@@ -2,16 +2,15 @@ import { StyledHeader } from "./styles";
 import { Title } from "../../styles/styles";
 import { FiMenu } from "react-icons/fi";
 import { Button } from "./styles";
+import { useRecoilState } from "recoil";
+import { sideBarState } from "../../hooks/atom";
 
-interface IProps {
-  opened: boolean;
-  setOpened: Function;
-}
-
-export function Header(props: IProps) {
+export function Header() {
+  const [isSideBarOpened, setSidebarState] = useRecoilState(sideBarState);
   function handleChange(): void {
-    const isOpened = props.opened;
-    props.setOpened(!isOpened);
+    setSidebarState(!isSideBarOpened);
+    // const isOpened = props.opened;
+    // props.setOpened(!isOpened);
   }
 
   return (

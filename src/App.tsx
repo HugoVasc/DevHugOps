@@ -6,15 +6,16 @@ import { StyledDiv, StyledMain } from "./Pages/Main/styles";
 import { Header } from "./Components/Header/Header";
 import { UnmountClosed } from "react-collapse";
 import { Sidebar } from "./Components/SideBar/Sidebar";
-import { useState } from "react";
+import { useRecoilValue } from "recoil";
+import { sideBarState } from "./hooks/atom";
 
 function App() {
-  const [opened, setOpened] = useState(true);
+  const isSideBarOpened = useRecoilValue(sideBarState);
 
   return (
     <StyledDiv>
       <Router>
-        <Header opened={opened} setOpened={setOpened} />
+        <Header />
         <StyledMain>
           <Routes>
             <Route path="/" element={<Main />}>
@@ -23,7 +24,7 @@ function App() {
               <Route path="contact" element={<Contact />} />
             </Route>
           </Routes>
-          <UnmountClosed isOpened={opened}>
+          <UnmountClosed isOpened={isSideBarOpened}>
             <Sidebar />
           </UnmountClosed>
         </StyledMain>
