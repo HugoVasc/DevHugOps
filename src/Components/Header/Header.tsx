@@ -15,7 +15,7 @@ export function Header() {
 
   return (
     <StyledHeader>
-      <Title size="36px">Hugo Tech Services</Title>
+      <Title size="36px">Hugo Developer</Title>
       <Button onClick={handleChange}>
         <FiMenu />
       </Button>

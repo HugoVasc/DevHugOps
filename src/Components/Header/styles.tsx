@@ -8,7 +8,8 @@ export const StyledHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+  /* background-color: rgb(117 166 245 / var(--tw-bg-opacity)); */
+  background-color: rgb(35 52 88 / var(--tw-bg-opacity));
   border-bottom-width: 1px;
   border-radius: 0 0 15px 15px;
 `;

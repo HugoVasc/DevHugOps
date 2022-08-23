@@ -13,7 +13,7 @@ function App() {
   const isSideBarOpened = useRecoilValue(sideBarState);
 
   return (
-    <StyledDiv>
+    <StyledDiv direction="column">
       <Router>
         <Header />
         <StyledMain>
