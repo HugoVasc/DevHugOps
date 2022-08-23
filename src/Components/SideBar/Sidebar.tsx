@@ -1,10 +1,12 @@
-import { SideProject } from "../SideObjects/SideProject";
-import { StyledDiv } from "./styles";
+import { BsXDiamondFill } from "react-icons/bs";
+import { SideObject } from "../SideObjects/SideObject";
+import { StyledDiv, StyledObject } from "./styles";
 export function Sidebar() {
   return (
     <StyledDiv>
-      <SideProject contactKind="LinkedIn" />
-      <SideProject contactKind="WhatsApp" />
+      <SideObject contactKind="LinkedIn" />
+      <SideObject contactKind="WhatsApp" />
+      <SideObject title="Projetos" />
     </StyledDiv>
   );
 }

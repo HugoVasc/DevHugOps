@@ -55,7 +55,7 @@ export const StyledDiv = styled("div")`
   border-color: rgb(16 39 116 / var(--tw-border-opacity));
   padding: 1rem; /* 16px */
   margin-top: 0.5rem; /* 8px */
-  background-color: rgb(16 39 116 / var(--tw-text-opacity));
+  background-color: rgb(35 52 88 / var(--tw-text-opacity));
 `;
 
 export const StyledHeader = styled("header")`

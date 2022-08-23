@@ -1,27 +1,23 @@
 import { CheckCircle } from "phosphor-react";
-import { BsLinkedin, BsWhatsapp } from "react-icons/bs";
-import {
-  StyledDiv,
-  StyledHeader,
-  StyledSpanStatus,
-  StyledSpanTitle,
-  StyledTitle,
-} from "./styles";
-import { useEffect, useState } from "react";
+import { BsLinkedin, BsWhatsapp, BsXDiamondFill } from "react-icons/bs";
+import { StyledDiv, StyledHeader, StyledSpanTitle } from "./styles";
+import { Component, useEffect, useState } from "react";
+import { IconType } from "react-icons/lib";
 interface Props {
-  contactKind: string;
+  contactKind?: string;
+  title?: string;
 }
 
-export function SideProject({ contactKind }: Props) {
+export function SideObject({ contactKind, title }: Props) {
   const [contactHref, setContactHref] = useState("");
   const [contactComponent, setContactComponent] = useState(<></>);
 
   useEffect(() => {
-    handleContacts(contactKind);
+    handleContacts({ contactKind, title });
   });
 
-  function handleContacts(kind: string): void {
-    if (kind === "WhatsApp") {
+  function handleContacts({ contactKind, title }: Props): void {
+    if (contactKind === "WhatsApp") {
       setContactHref(
         "https://api.whatsapp.com/send/?phone=5561982815820&text=Olá%2C+Hugo,+acabei+de+ver+seu+portifólio%2C+e+gostaria+de+conversar+com+você!"
       );
@@ -30,7 +26,7 @@ export function SideProject({ contactKind }: Props) {
           <BsWhatsapp /> WhatsApp
         </StyledSpanTitle>
       );
-    } else if (kind === "LinkedIn") {
+    } else if (contactKind === "LinkedIn") {
       setContactHref("https://www.linkedin.com/in/hugosvasconcelos/");
       setContactComponent(
         <StyledSpanTitle>
@@ -38,14 +34,17 @@ export function SideProject({ contactKind }: Props) {
         </StyledSpanTitle>
       );
     } else {
-      setContactComponent(<p>Elemento nao renderizado</p>);
+      setContactComponent(
+        <StyledSpanTitle>
+          <BsXDiamondFill />
+          {title}
+        </StyledSpanTitle>
+      );
     }
   }
   return (
     <a href={contactHref} target="_blank">
-      <StyledDiv>
-        <StyledHeader>{contactComponent}</StyledHeader>
-      </StyledDiv>
+      <StyledDiv>{contactComponent}</StyledDiv>
     </a>
   );
 }
