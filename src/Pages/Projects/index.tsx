@@ -8,7 +8,6 @@ export function Projects() {
         <Title size="2.7vw">Projetos</Title>
         <StyledDiv direction="row">
           <ProjectObject />
-          <ProjectObject />
         </StyledDiv>
       </StyledDiv>
     </StyledMain>

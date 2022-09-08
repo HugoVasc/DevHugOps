@@ -6,9 +6,11 @@ import { IconType } from "react-icons/lib";
 interface Props {
   contactKind?: string;
   title?: string;
+  link?: string;
 }
 
-export function SideObject({ contactKind, title }: Props) {
+export function SideObject({ contactKind, title, link }: Props) {
+  const [blankPage, setBlankPage] = useState(true);
   const [contactHref, setContactHref] = useState("");
   const [contactComponent, setContactComponent] = useState(<></>);
 
@@ -18,6 +20,7 @@ export function SideObject({ contactKind, title }: Props) {
 
   function handleContacts({ contactKind, title }: Props): void {
     if (contactKind === "WhatsApp") {
+      setBlankPage(true);
       setContactHref(
         "https://api.whatsapp.com/send/?phone=5561982815820&text=Olá%2C+Hugo,+acabei+de+ver+seu+portifólio%2C+e+gostaria+de+conversar+com+você!"
       );
@@ -27,6 +30,7 @@ export function SideObject({ contactKind, title }: Props) {
         </StyledSpanTitle>
       );
     } else if (contactKind === "LinkedIn") {
+      setBlankPage(true);
       setContactHref("https://www.linkedin.com/in/hugosvasconcelos/");
       setContactComponent(
         <StyledSpanTitle>
@@ -34,6 +38,8 @@ export function SideObject({ contactKind, title }: Props) {
         </StyledSpanTitle>
       );
     } else {
+      setBlankPage(false);
+      setContactHref(`/${link}`);
       setContactComponent(
         <StyledSpanTitle>
           <BsXDiamondFill />
@@ -43,8 +49,16 @@ export function SideObject({ contactKind, title }: Props) {
     }
   }
   return (
-    <a href={contactHref} target="_blank">
-      <StyledDiv>{contactComponent}</StyledDiv>
-    </a>
+    <>
+      {blankPage ? (
+        <a href={contactHref} target="_blank">
+          <StyledDiv>{contactComponent}</StyledDiv>
+        </a>
+      ) : (
+        <a href={contactHref}>
+          <StyledDiv>{contactComponent}</StyledDiv>
+        </a>
+      )}
+    </>
   );
 }

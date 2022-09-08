@@ -6,7 +6,7 @@ export function Sidebar() {
     <StyledDiv>
       <SideObject contactKind="LinkedIn" />
       <SideObject contactKind="WhatsApp" />
-      <SideObject title="Projetos" />
+      <SideObject title="Projetos" link="projects" />
     </StyledDiv>
   );
 }

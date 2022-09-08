@@ -28,6 +28,8 @@ export const StyledSpanTitle = styled("span")`
   display: flex;
   align-items: center;
   gap: 0.5rem /* 8px */;
+  &:hover {
+  }
 `;
 
 export const StyledSpanStatus = styled("span")`
