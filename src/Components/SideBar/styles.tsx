@@ -4,7 +4,7 @@ export const StyledDiv = styled("div")`
   display: flex;
   flex-direction: column;
   height: inherit;
-  width: 8vw;
+  width: 150px;
 `;
 
 export const StyledObject = styled("div")`

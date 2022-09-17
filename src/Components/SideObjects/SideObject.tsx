@@ -1,8 +1,7 @@
-import { CheckCircle } from "phosphor-react";
 import { BsLinkedin, BsWhatsapp, BsXDiamondFill } from "react-icons/bs";
 import { StyledDiv, StyledHeader, StyledSpanTitle } from "./styles";
-import { Component, useEffect, useState } from "react";
-import { IconType } from "react-icons/lib";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 interface Props {
   contactKind?: string;
   title?: string;
@@ -55,9 +54,9 @@ export function SideObject({ contactKind, title, link }: Props) {
           <StyledDiv>{contactComponent}</StyledDiv>
         </a>
       ) : (
-        <a href={contactHref}>
+        <Link to={contactHref}>
           <StyledDiv>{contactComponent}</StyledDiv>
-        </a>
+        </Link>
       )}
     </>
   );
