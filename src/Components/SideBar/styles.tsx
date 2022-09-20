@@ -1,10 +1,31 @@
 import styled from "styled-components";
+import { keyframes } from "styled-components";
 
-export const StyledDiv = styled("div")`
+const SlideIn = keyframes`
+	0% {
+		transform: translateX(100%);
+	}
+
+	100% {
+		transform: translateX(0px);
+	}
+`;
+
+const SlideOut = keyframes`
+	0% { transform: translateX(0%); }
+  100% { transform: translateX(100%); }
+`;
+
+export const StyledDiv = styled.div<{ Opened?: boolean }>`
   display: flex;
   flex-direction: column;
   height: inherit;
   width: 150px;
+  animation-name: ${(props) => (props.Opened ? SlideIn : SlideOut)};
+  /* animation-name: ${SlideOut}; */
+  animation-duration: 0.6s;
+  animation-iteration-count: 1;
+  transition: all 300ms ease-in-out;
 `;
 
 export const StyledObject = styled("div")`

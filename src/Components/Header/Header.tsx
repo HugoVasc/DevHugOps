@@ -10,8 +10,6 @@ export function Header() {
   const [isSideBarOpened, setSidebarState] = useRecoilState(sideBarState);
   function handleChange(): void {
     setSidebarState(!isSideBarOpened);
-    // const isOpened = props.opened;
-    // props.setOpened(!isOpened);
   }
 
   return (
